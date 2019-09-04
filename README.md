@@ -1,3 +1,10 @@
+# 作りたいもの
+農業の助けになるもの
+日々の作業をインプットして年間の作業内容を見れるとか
+他の農家の年間作業内容を見たり出来るとか
+超ざっくり。
+
+
 # README
 
 This README would normally document whatever steps are necessary to get the
