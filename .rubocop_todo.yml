@@ -17,9 +17,9 @@ Style/AsciiComments:
 # Cop supports --auto-correct.
 # Configuration parameters: AutoCorrect, EnforcedStyle.
 # SupportedStyles: nested, compact
-# Style/ClassAndModuleChildren:
-#   Exclude:
-#     - 'test/test_helper.rb'
+Style/ClassAndModuleChildren:
+  Exclude:
+    - 'test/test_helper.rb'
 
 # Offense count: 8
 Style/Documentation:
@@ -47,3 +47,9 @@ Style/MixinUsage:
 # URISchemes: http, https
 Metrics/LineLength:
   Max: 130
+
+AllCops:
+  TargetRubyVersion: 2.5.3
+  Exclude:
+    - db/schema.rb
+    - vendor/**/*

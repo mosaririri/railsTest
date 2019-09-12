@@ -43,6 +43,7 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails'
   gem 'rspec-rails'
+  gem 'rspec_junit_formatter'
 end
 
 group :development do
@@ -71,3 +72,6 @@ gem 'autoprefixer-rails', '~> 9.6', '>= 9.6.1.1'
 # Bootstrap関連
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
+
+# dotenv
+gem 'dotenv-rails'
