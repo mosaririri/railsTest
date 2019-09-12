@@ -50,4 +50,4 @@ Metrics/LineLength:
 
 AllCops:
   Exclude:
-    - 'db/**/*'
+    - db/schama.rb
