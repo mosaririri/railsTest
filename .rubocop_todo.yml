@@ -47,3 +47,7 @@ Style/MixinUsage:
 # URISchemes: http, https
 Metrics/LineLength:
   Max: 130
+
+AllCops:
+  Exclude:
+    - 'db/**/*'
