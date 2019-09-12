@@ -51,5 +51,5 @@ Metrics/LineLength:
 AllCops:
   TargetRubyVersion: 2.5.3
   Exclude:
-    - db/schama.rb
+    - db/schema.rb
     - vendor/**/*
