@@ -45,10 +45,10 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rspec_junit_formatter'
   # pry
-  gem 'pry-rails'
-  gem 'pry-doc'
-  gem 'pry-stack_explorer'
   gem 'pry-byebug'
+  gem 'pry-doc'
+  gem 'pry-rails'
+  gem 'pry-stack_explorer'
 end
 
 group :development do
