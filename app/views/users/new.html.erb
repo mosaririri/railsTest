@@ -1,0 +1,5 @@
+<%= form_for(@user, url: signup_path) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit 'create' %>
+<% end %>

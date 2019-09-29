@@ -1,0 +1,3 @@
+# ユーザーヘルパークラス
+module UsersHelper
+end
