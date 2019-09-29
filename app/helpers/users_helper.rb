@@ -1,2 +1,3 @@
+# ユーザーヘルパークラス
 module UsersHelper
 end

@@ -1,5 +1,5 @@
+# ユーザー情報に関するコントローラー
 class UsersController < ApplicationController
-
   # 新規作成画面
   def new
     @user = User.new
@@ -14,7 +14,6 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
-
 
   private
 

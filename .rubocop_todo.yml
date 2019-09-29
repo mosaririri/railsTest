@@ -51,5 +51,7 @@ Metrics/LineLength:
 AllCops:
   TargetRubyVersion: 2.5.3
   Exclude:
+    - config/**/*
     - db/**/*
     - vendor/**/*
+    - spec/**/*

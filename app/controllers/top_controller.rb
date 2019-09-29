@@ -2,6 +2,6 @@
 
 class TopController < ApplicationController
   def index
-    @user = User.first 
+    @user = User.first
   end
 end
