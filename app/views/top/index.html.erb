@@ -3,3 +3,9 @@
   <h2>topページ</h2>
 </div>
 
+
+<%= form_for(@user, url: top_index_path) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+<% end %>
+
