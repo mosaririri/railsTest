@@ -1,11 +1,14 @@
 <%= render 'layouts/header' %>
 <div class="container">
   <h2>topページ</h2>
-</div>
 
 
-<%= form_for(@user, url: top_index_path) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<ul class="users">
+<% @users.each do |user| %>
+  <li>
+    <p>id: <%= user.id %></p>
+    <p>name: <%= user.name %></p>
+  </li>
 <% end %>
-
+</ul>
+</div>
