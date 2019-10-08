@@ -1,0 +1,6 @@
+<%= render 'layouts/header' %>
+<%= form_for(@user, url: user_path) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+<% end %>
+

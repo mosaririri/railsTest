@@ -6,8 +6,10 @@
 <ul class="users">
 <% @users.each do |user| %>
   <li>
-    <p>id: <%= user.id %></p>
-    <p>name: <%= user.name %></p>
+    <%= link_to(edit_user_path(user.id)) do %>
+      <span>id: <%= user.id %></span><br>
+    <span>name: <%= user.name %></span>
+  <% end %>
   </li>
 <% end %>
 </ul>

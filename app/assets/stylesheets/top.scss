@@ -21,5 +21,8 @@ background-color: darkslategray;
   li {
     border: 1px solid #000000;
     text-align: start;
+    a {
+      display: block;
+    }
   }
 }
