@@ -1,0 +1,4 @@
+<%= render 'layouts/header' %>
+<p><%= @user.name %></p>
+<p><%= @user.email %></p>
+<%= link_to "delete", @user, method: :delete, data: {confirm: "削除しますか？"} %>
