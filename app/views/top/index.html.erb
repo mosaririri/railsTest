@@ -1,7 +1,7 @@
 <%= render 'layouts/header' %>
 <div class="container">
   <h2>topページ</h2>
-
+  <%= link_to "新規作成", new_user_path %>
 
 <ul class="users">
 <% @users.each do |user| %>

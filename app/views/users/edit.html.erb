@@ -2,5 +2,10 @@
 <%= form_for(@user, url: user_path) do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <%= f.submit 'update' %>
 <% end %>
-
+<%= link_to "delete", @user, method: :delete, data: {confirm: "削除しますか？"} %>

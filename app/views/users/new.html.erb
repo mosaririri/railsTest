@@ -1,5 +1,11 @@
+<%= render 'layouts/header' %>
+<p>newページ</p>
 <%= form_for(@user, url: signup_path) do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
-  <%= f.submit 'create' %>
+  <%= f.label :email%>
+  <%= f.text_field :email %>
+  <%= f.label :password %>
+  <%= f.text_field :password %>
+ <%= f.submit 'create' %>
 <% end %>

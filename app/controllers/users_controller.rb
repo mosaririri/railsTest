@@ -9,9 +9,18 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to root_url
+      redirect_to top_index_path
     else
       render 'new'
+    end
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      redirect_to @user
+    else
+      render 'edit'
     end
   end
 
@@ -27,9 +36,14 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def destroy
+    @user = User.find(params[:id]).destroy
+    redirect_to top_index_url
+  end
+
   private
 
   def user_params
-    params.require(:user).permit(:name)
+    params.require(:user).permit(:name, :email, :password)
   end
 end
