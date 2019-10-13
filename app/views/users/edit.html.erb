@@ -8,4 +8,5 @@
   <%= f.password_field :password %>
   <%= f.submit 'update' %>
 <% end %>
+<%= link_to "back", user_path %>
 <%= link_to "delete", @user, method: :delete, data: {confirm: "削除しますか？"} %>
