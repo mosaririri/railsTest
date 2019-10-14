@@ -1,4 +1,9 @@
 <%= render 'layouts/header' %>
-<p><%= @user.name %></p>
-<p><%= @user.email %></p>
+<p>name: <%= @user.name %></p>
+<p>email: <%= @user.email %></p>
+<p>tasks：<%= @user.tasks.count %></p>
+<ul class="tasks">
+  <%= render @tasks %>
+</ul>
+<%= link_to "setting", edit_user_path %>
 <%= link_to "delete", @user, method: :delete, data: {confirm: "削除しますか？"} %>
