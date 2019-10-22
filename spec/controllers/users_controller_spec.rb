@@ -98,4 +98,31 @@ RSpec.describe UsersController, type: :controller do
       end
     end
   end
+  describe '#delete' do
+    before do
+      @user = create(:user)
+    end
+    context '対象ユーザーが存在する' do
+      it 'ステータスに302を返す' do
+        delete :destroy, params: { id: @user.id }
+        expect(response.status).to eq 302
+      end
+      it 'DBの件数が1件減少する' do
+        expect {
+          delete :destroy, params: { id: @user.id }
+        }.to change(User, :count).by(-1)
+      end
+      it 'top#indexに遷移する' do
+        delete :destroy, params: { id: @user.id }
+        expect(response).to redirect_to top_index_path
+      end
+    end
+    context '対象ユーザーが存在しない' do
+      it '例外を吐く' do
+        expect {
+          delete :destroy, params: {id: 99999 }
+        }.to raise_exception(ActiveRecord::RecordNotFound)
+      end
+    end
+  end
 end
