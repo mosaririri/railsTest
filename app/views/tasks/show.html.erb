@@ -1,0 +1,13 @@
+<%= render 'layouts/header' %>
+<%= form_with model: @task do |t| %>
+  <%= t.text_field :id, hidden: true %>
+  <%= t.label :user_id %>
+  <%= t.text_field :user_id, readonly: true %>
+  <%= t.label :content %>
+  <%= t.text_field :content %>
+  <%= t.label :is_executed %>
+  <%= t.check_box :is_executed %>
+  <%= t.submit '更新' %>
+<% end %>
+<%= link_to "delete", @task, method: :delete, data: {confirm: "削除しますか？"} %>
+<%= link_to '戻る', user_path(@task.user_id) %>

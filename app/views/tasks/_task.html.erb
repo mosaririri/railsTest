@@ -1,5 +1,10 @@
 <li>
-  <p><a href="#"><%= task.id %></a></p>
   <p><%= task.content %></p>
-  <p><%= task.executed_at %></p>
+  <% if task.is_executed %>
+    <p>実施済み</p>
+    <p><%= task.executed_at %></p>
+  <% else %>
+    <p>未実施</p>
+  <% end %>
+  <%= link_to '編集する', task_path(id: task.id) %>
 </li>

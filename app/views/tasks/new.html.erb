@@ -1,0 +1,11 @@
+<%= render 'layouts/header' %>
+<p>ユーザーid: <%= params[:id] %></p>
+
+<%= form_for(@task, url: tasks_create_path) do |f| %>
+  <%= f.label :user_id %>
+  <%= f.text_field :user_id, value: params[:id], readonly: true %>
+  <%= f.label :content %>
+  <%= f.text_area:content %>
+  <%= f.submit '作成' %>
+<% end %>
+<%= link_to '戻る', user_path(@task.user_id) %>
