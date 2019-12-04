@@ -25,7 +25,7 @@ class TasksController < ApplicationController
   # タスク更新
   def update
     @task = Task.find(params[:id])
-    @task.executed_at = Time.zone.now if params[:is_executed]
+    @task.executed_at = Time.zone.now if params[:task][:is_executed]
     if @task.update_attributes(task_params)
       redirect_to user_path(@task.user_id)
     else
