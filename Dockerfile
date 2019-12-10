@@ -5,6 +5,9 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | \
                        libpq-dev \
                        nodejs
 
+# MySQLをrootで実行する設定に書き換える
+RUN sed -e 's/^ *user *= *mysql$/user = root/' -i /etc/mysql/my.cnf
+
 # 作業ディレクトリの作成、設定
 RUN mkdir /myapp
 ENV APP_ROOT /myapp
