@@ -2,6 +2,9 @@ version: '3'
 services:
   db:
     image: mysql:5.7
+    command: --innodb-use-native-aio=0
+    volumes:
+      - ./db/mysql_data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: root
@@ -9,6 +12,7 @@ services:
       MYSQL_PASSWORD: docker
     ports:
       - "3306:3306"
+    user: "1000:50"
 
   web:
     build: .
