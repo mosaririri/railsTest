@@ -81,3 +81,6 @@ gem 'jquery-rails'
 
 # dotenv
 gem 'dotenv-rails'
+
+# devise
+gem 'devise'
