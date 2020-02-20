@@ -1,6 +1,12 @@
 <%= render 'layouts/header' %>
+    <% if notice %>
+    　　<p><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p><%= alert %></p>
+    <% end %>
 <p>newページ</p>
-<%= form_for(@user, url: signup_path) do |f| %>
+<%= form_for(@user, url: users_path) do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.label :email%>

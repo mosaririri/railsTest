@@ -1,7 +1,13 @@
   <%= render 'layouts/header' %>
   <div class="container">
-  <h1>hello!!!</h1>
+  <h1>hello!</h1>
   <p>please push button!</p>
- 
+  <%= form_with url: users_index_path, model: @user do |t| %>
+    <%= t.label :id %>
+    <%= t.text_field :id %>
+    <%= t.label :password %>
+    <%= t.text_field :password %>
+    <%= t.submit 'login' %>
+  <% end %> 
   <%= link_to "push", top_index_path, class: "btn btn-lg btn-primary" %>
   </div>

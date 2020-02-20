@@ -62,4 +62,7 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.web_console.whitelisted_ips = '0.0.0.0/0'
+
+  # deviseの設定
+  config.action_mailer.default_url_options = { protocol: 'https', host: 'localhost', port: 3000 }
 end
