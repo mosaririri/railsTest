@@ -2,12 +2,13 @@
   <div class="container">
   <h1>hello!</h1>
   <p>please push button!</p>
-  <%= form_with url: users_index_path, model: @user do |t| %>
-    <%= t.label :id %>
-    <%= t.text_field :id %>
+  <%= form_with url: user_session_path, model: @user do |t| %>
+    <%= t.label :email %>
+    <%= t.text_field :email %>
     <%= t.label :password %>
     <%= t.text_field :password %>
     <%= t.submit 'login' %>
   <% end %> 
   <%= link_to "push", top_index_path, class: "btn btn-lg btn-primary" %>
+  <%= link_to "logout", destroy_user_session_path, method: :delete, class: "btn btn-lg btn-primary" %>
   </div>

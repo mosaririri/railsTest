@@ -1,6 +1,6 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <nav>
-    <ul>
+    <ul class="header-list">
       <li>
         <%= link_to "top",root_url %>
       </li>
@@ -9,4 +9,9 @@
       </li>
     </ul>
   </nav>
+      <% if user_signed_in? %>
+  <%= link_to "logout", destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
+      <% else %>
+  <%= link_to "login", user_session_path, class: "btn btn-primary" %>
+      <% end %>
 </header>
