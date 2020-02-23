@@ -2,7 +2,9 @@
 
 Rails.application.routes.draw do
   devise_for :users
-  root 'static_pages#home'
+  root 'top#index'
+
+  get 'users/index'
   get 'static_pages/home'
   get 'top/index'
   get 'users/index'
