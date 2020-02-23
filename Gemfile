@@ -84,3 +84,5 @@ gem 'dotenv-rails'
 
 # devise
 gem 'devise'
+
+gem 'slim-rails'

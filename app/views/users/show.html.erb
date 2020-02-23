@@ -5,6 +5,8 @@
 <ul class="tasks">
   <%= render @tasks %>
 </ul>
+<% if user_signed_in? && current_user.id == @user.id %>
 <%= link_to 'new_task', tasks_new_path(id: @user.id) %>
 <%= link_to "setting", edit_user_path %>
 <%= link_to "delete", @user, method: :delete, data: {confirm: "削除しますか？"} %>
+<% end %>
