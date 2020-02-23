@@ -6,5 +6,7 @@
   <% else %>
     <p>未実施</p>
   <% end %>
-  <%= link_to '編集する', task_path(id: task.id) %>
+  <% if user_signed_in? %>
+    <%= link_to '編集する', task_path(id: task.id) %>
+  <% end %>
 </li>
