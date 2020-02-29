@@ -1,13 +1,48 @@
 = render 'layouts/header'
-h1 mypage
 
-table
-    thead
-        tr
-            th 1
-    tbody
-        tr
-            td test
-
-p test
-= link_to 'test', '#'
+.mypage-wrapper
+    .mypage-side-menu
+        ul
+            li
+                a.side-menu-link link1
+            li
+                a.side-menu-link link2
+            li
+                a.side-menu-link link3
+ 
+    .mypage-main-menu
+        h3 ユーザー名
+        .task-wrapper
+            .task-visualize-wrapper
+                .task-visualize-content
+                    .task-visualize-header
+                        h4 タスク図表
+                        a href="#"
+                            button.btn.btn-sm.btn-primary タスクを設定する
+                    .task-visualize-list 00:00
+                    .task-visualize-list 01:00
+                    .task-visualize-list 02:00
+                    .task-visualize-list 03:00
+                    .task-visualize-list 04:00
+                    .task-visualize-list 05:00
+                    .task-visualize-list 06:00
+                    .task-visualize-list 07:00
+                    .task-visualize-list 08:00
+                    .task-visualize-list 09:00
+                    .task-visualize-list 10:00
+                    .task-visualize-list 11:00
+                    .task-visualize-list 12:00
+                    .task-visualize-list 13:00
+                    .task-visualize-list 14:00
+                    .task-visualize-list 15:00
+                    .task-visualize-list 16:00
+                    .task-visualize-list 17:00
+                    .task-visualize-list 18:00
+                    .task-visualize-list 19:00
+                    .task-visualize-list 20:00
+                    .task-visualize-list 21:00
+                    .task-visualize-list 22:00
+                    .task-visualize-list 23;00
+            .task-calendar-wrapper
+                h4 実施状況
+                #calendar
