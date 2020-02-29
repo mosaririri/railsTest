@@ -21,7 +21,8 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+# fullcalendarの表示のためにコメントアウト
+# gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -79,10 +80,15 @@ gem 'autoprefixer-rails', '~> 9.6', '>= 9.6.1.1'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 
-# dotenv
+# .envファイルに設定を詰め込む
 gem 'dotenv-rails'
 
-# devise
+# 認証周り
 gem 'devise'
 
+# htmlの書き方を省略できる
 gem 'slim-rails'
+
+# カレンダー機能
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'

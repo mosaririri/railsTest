@@ -1,3 +1,57 @@
 // Place all the styles related to the mypage controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.mypage-wrapper {
+    display: flex;
+}
+
+.mypage-side-menu {
+    background: darkolivegreen;
+    width: 15%;
+    // height: 400px;
+
+    ul {
+        list-style-type: none;
+    }
+}
+
+.mypage-main-menu {
+    width: 85%;
+    // height: 400px;
+}
+
+.task-wrapper {
+    display: flex;
+}
+
+.task-list-wrapper {
+    width: 400px;
+}
+
+.task-visualize-wrapper {
+    width: 50%;
+}
+
+.task-visualize-content {
+    width: 300px;
+    margin: 15px auto;
+}
+.task-visualize-list {
+    width: 100%;
+    height: 35px;
+    border: 1px dotted black;
+}
+
+.task-visualize-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-calendar-wrapper {
+    margin: 15px auto;
+    width: 50%;
+}
+#calendar {
+    width: 560px;
+}
