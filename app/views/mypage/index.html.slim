@@ -12,6 +12,8 @@
  
     .mypage-main-menu
         h3 ユーザー名
+        = @user.name
+        = render @tasks
         .task-wrapper
             .task-visualize-wrapper
                 .task-visualize-content
@@ -46,3 +48,6 @@
             .task-calendar-wrapper
                 h4 実施状況
                 #calendar
+
+#run-button
+    button.btn.btn-sm.btn-primary 実行
