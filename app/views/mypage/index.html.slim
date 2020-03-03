@@ -4,14 +4,14 @@
     .mypage-side-menu
         ul
             li
-                a.side-menu-link link1
+                a.side-menu-link タスク設定
             li
-                a.side-menu-link link2
+                a.side-menu-link ユーザー設定
             li
-                a.side-menu-link link3
+                a.side-menu-link ユーザー一覧
  
     .mypage-main-menu
-        h3 ユーザー名
+        h3 = @user.name
         .task-wrapper
             .task-visualize-wrapper
                 .task-visualize-content
@@ -19,30 +19,36 @@
                         h4 タスク図表
                         a href="#"
                             button.btn.btn-sm.btn-primary タスクを設定する
-                    .task-visualize-list 00:00
-                    .task-visualize-list 01:00
-                    .task-visualize-list 02:00
-                    .task-visualize-list 03:00
-                    .task-visualize-list 04:00
-                    .task-visualize-list 05:00
-                    .task-visualize-list 06:00
-                    .task-visualize-list 07:00
-                    .task-visualize-list 08:00
-                    .task-visualize-list 09:00
-                    .task-visualize-list 10:00
-                    .task-visualize-list 11:00
-                    .task-visualize-list 12:00
-                    .task-visualize-list 13:00
-                    .task-visualize-list 14:00
-                    .task-visualize-list 15:00
-                    .task-visualize-list 16:00
-                    .task-visualize-list 17:00
-                    .task-visualize-list 18:00
-                    .task-visualize-list 19:00
-                    .task-visualize-list 20:00
-                    .task-visualize-list 21:00
-                    .task-visualize-list 22:00
-                    .task-visualize-list 23;00
+                    .task-visualize-list#0000 00:00
+                    .task-visualize-list#0100 01:00
+                    .task-visualize-list#0200 02:00
+                    .task-visualize-list#0300 03:00
+                    .task-visualize-list#0400 04:00
+                    .task-visualize-list#0500 05:00
+                    .task-visualize-list#0600 06:00
+                    .task-visualize-list#0700 07:00
+                    .task-visualize-list#0800 08:00
+                    .task-visualize-list#0900 09:00
+                    .task-visualize-list#1000 10:00
+                    .task-visualize-list#1100 11:00
+                    .task-visualize-list#1200 12:00
+                    .task-visualize-list#1300 13:00
+                    .task-visualize-list#1400 14:00
+                    .task-visualize-list#1500 15:00
+                    .task-visualize-list#1600 16:00
+                    .task-visualize-list#1700 17:00
+                    .task-visualize-list#1800 18:00
+                    .task-visualize-list#1900 19:00
+                    .task-visualize-list#2000 20:00
+                    .task-visualize-list#2100 21:00
+                    .task-visualize-list#2200 22:00
+                    .task-visualize-list#2300 23:00
+                    .task-visualize-list#2400 24:00
             .task-calendar-wrapper
                 h4 実施状況
                 #calendar
+
+#run-button.dummy
+    button.btn.btn-sm.btn-primary 実行
+
+#task-holder data-tasks=@tasks.to_json

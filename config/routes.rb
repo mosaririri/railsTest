@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'
   get 'mypage/index', to: 'mypage#index'
+  get 'users/:id/mypage', to: 'mypage#index', as: :user_mypage
 
  resources :users
  resources :tasks, only:[:show, :create, :update, :destroy]

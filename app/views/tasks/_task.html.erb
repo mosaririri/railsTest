@@ -1,5 +1,6 @@
 <li>
   <p><%= task.content %></p>
+<p><%= task.execute_time %>
   <% if task.is_executed %>
     <p>実施済み</p>
     <p><%= task.executed_at %></p>

@@ -43,6 +43,10 @@
     border: 1px dotted black;
 }
 
+.task-visualize-list.has-task {
+    background: aquamarine;
+}
+
 .task-visualize-header {
     display: flex;
     justify-content: space-between;
@@ -54,4 +58,12 @@
 }
 #calendar {
     width: 560px;
+}
+
+#run-button {
+    margin-top: 20px;
+}
+
+.dummy {
+    display: none;
 }
