@@ -3,7 +3,7 @@
 # mypageコントローラ
 class MypageController < ApplicationController
   def index
-    @user = User.find(params[:id]);
-    @tasks = @user.tasks;
+    @user = User.find(params[:id])
+    @tasks = @user.tasks
   end
 end
